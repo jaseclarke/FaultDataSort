@@ -52,9 +52,10 @@ namespace FaultDataSort
 
         private string GetLineTag(string lineText)
         {
-            string[] elements = lineText.Split(new []{' '}, StringSplitOptions.RemoveEmptyEntries);
-            if (elements.Length < 7) return null;
-            string tag = elements[7].Substring(1); // strip off the first character of the tag
+//            string[] elements = lineText.Split(new []{' '}, StringSplitOptions.RemoveEmptyEntries);
+//            if (elements.Length < 7) return null;
+          
+            string tag =lineText.Substring(52,45).Trim(); // get the required tag - starts at column 52
             return tag;
         }
     }
